@@ -13,6 +13,13 @@
         foreach ($array as $key => $value) {
             echo "index " . $key . " value " . $value ."<br/>";
         };
+
+        function greet(string $name) {
+            echo "Hello ". $name .".<br/>";
+        }
+
+        greet("Jean")
+
     ?>
 
 </body>
