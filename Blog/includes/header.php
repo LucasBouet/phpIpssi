@@ -1,6 +1,4 @@
-<h1 class="text-3xl font-bold underline">Hello world!</h1>
-<ul>
-    <li>test1</li>
-    <li>test2</li>
-</ul>
+<div class="bg-green-500">
+    <h1 class="text-3xl underline text-center font-black uppercase p-15 text-white">My new articles!</h1>
+</div>
 
