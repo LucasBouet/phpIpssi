@@ -19,7 +19,7 @@
             $article = $articles[$i];
             if ($article['published']) {
                 ?>
-                <a href="article.php?id=<?php echo $article['id']; ?>">
+                <a href="article.php?id=<?php echo $article['id'] - 1; ?>">
                     <article class="max-w-4xl mx-auto my-8 p-6 border border-gray-300 rounded-lg shadow-lg">
                         <h2 class="text-2xl font-bold mb-4"><?php echo $article['title']; ?></h2>
                         <p class="text-gray-700 mb-4"><?php echo excerpt($article['content'], 200); ?></p>
