@@ -9,11 +9,30 @@
 <body>
     <?php
         include_once("./includes/functions.php");
-        include_once("./data/articles.php");
+        include_once("./data/database.php");
+        #include_once("./data/articles.php");
+        $id = e($_GET['id']) ?? null;
+        $article = null;
 
+        if ($id !== false && $id !== null) {
+            $stmt = $conn->prepare("SELECT id, title, content, author, created_at, published FROM Articles WHERE id = ?");
+            $stmt->bind_param("i", $id);
+            $stmt->execute();
+            $res = $stmt->get_result();
+            if ($row = $res->fetch_assoc()) {
+                $article = [
+                    'id' => (int) $row['id'],
+                    'title' => $row['title'],
+                    'content' => $row['content'],
+                    'author' => $row['author'],
+                    'created_at' => $row['created_at'],
+                    'published' => (bool) $row['published'],
+                ];
+            }
+            $stmt->close();
+            $conn->close();
+        }
         include_once("./includes/header.php");
-        $choosed_id = e($_GET['id']) ?? null;
-        $article = $articles[$choosed_id];
         if ($article && $article['published']) {
             ?>
             <article class="max-w-4xl mx-auto my-8 p-6 border border-gray-300 rounded-lg shadow-lg">
