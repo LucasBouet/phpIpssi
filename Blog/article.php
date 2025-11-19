@@ -27,6 +27,8 @@
             <p class="text-center text-red-500 mt-8">Article non trouvé ou non publié.</p>
             <?php
         }
+
+        include_once("./includes/footer.php");
     ?>
 </body>
 </html>
