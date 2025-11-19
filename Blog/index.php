@@ -48,7 +48,6 @@
                                     <p class="text-sm text-gray-500">Publié par <?php echo $article['author']; ?> le <?php echo date('d/m/Y à H:i', strtotime($article['created_at'])); ?></p>
                                     <p class="text-sm text-green-700 ">Learn more...</p>
                                 </div>
-                                
                             </article>
                         </a>
                         <?php
