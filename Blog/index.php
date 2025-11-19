@@ -9,7 +9,6 @@
 <body>
     <?php 
         include_once("./includes/functions.php");
-        #include_once("./data/articles.php");
         include_once("./data/database.php");
 
         include_once("./includes/header.php");
@@ -61,6 +60,5 @@
         include_once("./includes/footer.php");
         $conn->close();
     ?>
-    
 </body>
 </html>
