@@ -92,4 +92,18 @@ function isCurrentPage(string $page): bool
     $currentScript = basename($_SERVER['PHP_SELF']);
     return $currentScript === $page;
 }
+
+/**
+ * Summary of debug_to_console
+ * @param mixed $data
+ * @return void
+ */
+function debug_to_console($data) {
+    $output = $data;
+    if (is_array($output))
+        $output = implode(',', $output);
+
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+}
+
 ?>
