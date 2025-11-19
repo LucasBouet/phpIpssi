@@ -25,7 +25,7 @@
                             <article style="animation: slideInRight 0.35s ease-out forwards <?php echo ($i * 200 + 200) ?>ms;opacity: 0;" class="max-w-4xl mx-auto my-8 p-6 border border-gray-300 rounded-lg shadow-lg">
                                 <h2 class="text-2xl font-bold mb-4"><?php echo $article['title']; ?></h2>
                                 <p class="text-gray-700 mb-4"><?php echo excerpt($article['content'], 200); ?></p>
-                                <div class="flex justify-between items-center">
+                                <div class="flex justify-between items-center w-full">
                                     <p class="text-sm text-gray-500">Publié par <?php echo $article['author']; ?> le <?php echo date('d/m/Y à H:i', strtotime($article['created_at'])); ?></p>
                                     <p class="text-sm text-green-700 ">Learn more...</p>
                                 </div>
