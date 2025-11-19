@@ -10,7 +10,6 @@
     <?php
         include_once("./includes/functions.php");
         include_once("./data/database.php");
-        #include_once("./data/articles.php");
         $id = e($_GET['id']) ?? null;
         $article = null;
 
